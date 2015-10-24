@@ -22,4 +22,12 @@
 		<property name="initialPoolSize" value="${c3p0.pool.size.ini}" />
 		<property name="acquireIncrement" value="${c3p0.pool.size.increment}" />
 	</bean>
+	
+	<!-- 配置DButil的bean -->
+	<bean id="DButil" class="com.sunyanxiong.testpos.util.DButil">
+	  <property name="sf">
+	     <ref local="sessionFactory"/>
+	  </property>
+	</bean>
+	
 </beans>

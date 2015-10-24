@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+   package="org.hibernate.action">
+   <class name="com.sunyanxiong.testpos" table="pos_users">
+         <id name="id" type="String" column="id">
+          <generator class="indentity"/>
+         </id>
+         <property name="aname" column="aname" length="50" type="String"/>
+         <property name="apwd" column="apwd" length="50" type="String"/>
+         <property name="alevel" column="alevel" length="50" type="String"/>
+   </class>
+
+</hibernate-mapping>
+
