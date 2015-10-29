@@ -3,12 +3,28 @@
   <head>
     <title>树形列表</title>
     <link rel=stylesheet href="css/style.css" type="text/css">
+    
+    <script language="javascript">
+    
+   function check(root,list){
+       
+    if(list.style.display == "none"){
+       list.style.display = "block";    //  子节点显示
+       root.innerHTML = "<img border='0' src='img/pkg-open.gif'/>";
+    }else{
+       list.style.display = "none";     //   子节点不可见
+       root.innerHTML = "<img border='0' src='img/pkg-closed.gif'/>";
+    }
+   
+   }
+</script>
+    
   </head>
   <body bgcolor="#EBF5FD">
     <jsp:useBean id="userBean" class="com.sunyanxiong.testpos.UsersBean" scope="session"/>
     <table border="0">
       <tr><td>
-       	<a id="A" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>POS信息管理系统</font></a>
+       	<a id="A" href="#" onclick="check(document.all.A,document.all.AA)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>POS信息管理系统</font></a>
       </td></tr>
       
       <tr><td>        
@@ -16,7 +32,7 @@
            <!-- 基本信息-->
           <tr><td>
           	&nbsp;&nbsp;
-            <a id="B" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>基本信息</font></a>
+            <a id="B" href="#" onclick="check(document.all.B,document.all.BB)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>基本信息</font></a>
           </td></tr>
           <tr><td>
           	<table id="BB" border="0" style="display:black">
@@ -42,13 +58,13 @@
           <!-- 业务处理 -->
           <tr><td>
           	&nbsp;&nbsp;
-            <a id="C" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>业务处理</font></a>
+            <a id="C" href="#" onclick="check(document.all.C,document.all.CC)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>业务处理</font></a>
           </td></tr>
           <tr><td>
             <table id="CC" border="0" style="display:black">
           	  <tr><td>
           	  &nbsp;&nbsp;&nbsp;&nbsp;
-          	  <a id="E" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>商品采购</font></a>
+          	  <a id="E" href="#" onclick="check(document.all.E,document.all.EE)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>商品采购</font></a>
           	  </td></tr>
           	  <tr><td>
           	    <table id="EE" border="0" style="display:black">
@@ -66,7 +82,7 @@
           	  
           	  <tr><td>
           	  &nbsp;&nbsp;&nbsp;&nbsp;
-          	  <a id="F" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>商品销售</font></a>
+          	  <a id="F" href="#" onclick="check(document.all.F,document.all.FF)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>商品销售</font></a>
           	  </td></tr>
           	  <tr><td>
           	    <table id="FF" border="0" style="display:black">
@@ -86,7 +102,7 @@
            <!-- 业务统计 -->
           <tr><td>
           	&nbsp;&nbsp;
-            <a id="D" href="#" onclick=""><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>业务统计</font></a>
+            <a id="D" href="#" onclick="check(document.all.D,document.all.DD)"><img border="0" src="img/pkg-open.gif"/></a><a href="#"><font>业务统计</font></a>
           </td></tr>
           <tr><td>
             <table id="DD" border="0" style="display:black">
