@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <! DOCTYPE html>
-<html>
+<html style="width: 1061px; ">
 <head>
 <title>登录页面</title>
 <link rel=stylesheet href="css/style.css" type="text/css">
@@ -29,11 +29,11 @@
 
 </head>
 
-<body>
-<div class="out">
-   <div class="login_style"">
-       <center style="width: 1058px; height: 251px">
-       <form action="ManageServlet" method="post" id="mf" target="bottom" style="height: 204px; ">
+<body style="width: 1066px; background:url(img/hello.jpg);">
+<div class="out" style="width: 1050px;background:url(img/old.jpg);">
+   <div class="login_style"" style="width: 500px; height: 150px;">
+       <center style="width: 542px;">
+       <form action="ManageServlet" method="post" id="mf" target="bottom" style="height: 200px; width: 372px;">
          <input type="hidden" name="action" value="login">
          <table style="height: 195px; ">
             <tr>
@@ -47,17 +47,19 @@
              <tr>
 	        <td colspan="2" align="center">
 	        <img border="0" src="img/ddl.gif" id="lg"
+	          onclick="javascript:checkName()" 
           	  style="cursor:hand"
-          	  onmouseover=""
-          	  onmouseout=""
-          	  onmouseup=""        	
-          	  onmousedown=""/>
+          	  onmouseover="document.all.lg.src='img/ddla.gif'"
+          	  onmouseout="document.all.lg.src='img/ddl.gif'"
+          	  onmouseup="document.all.lg.src='img/ddla.gif'"        	
+          	  onmousedown="document.all.lg.src='img/ddlb.gif'"/>
 	        <img border="0" src="img/cz.gif" id="cz" 
+	          onclick="javascript:document.all.mf.reset()"
           	  style="cursor:hand"
-          	  onmouseover=""
-          	  onmouseout=""
-          	  onmouseup=""        	
-          	  onmousedown=""/></td>
+          	  onmouseover="document.all.cz.src='img/cza.gif'"
+          	  onmouseout="document.all.cz.src='img/cz.gif'"
+          	  onmouseup="document.all.cz.src='img/cza.gif'"        	
+          	  onmousedown="document.all.cz.src='img/czb.gif'"/></td>
 	      </tr>
          </table>
        </form>

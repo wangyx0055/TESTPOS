@@ -30,7 +30,7 @@ public class DBinsert {
 	/**
 	 * 保存对象
 	 * */
-	private void insetTable(String tablename,Object obj){
+	public void insetTable(String tablename,Object obj){
 		
 	  Session session = sf.openSession();
 	  Transaction t = session.beginTransaction();    // 开启事务
